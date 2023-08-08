@@ -65,7 +65,6 @@ This plugin solves our problem by generating entry points for all files matching
 npm install vite-plugin-entrypoints --save-dev
 
 # Yarn
-
 yarn add vite-plugin-entrypoints --dev
 
 # PNPM

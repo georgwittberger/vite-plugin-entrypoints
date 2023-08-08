@@ -17,14 +17,14 @@ export default defineConfig({
       output: [
         {
           format: 'cjs',
-          entryFileNames: '[name].js',
-          chunkFileNames: 'chunks/[name].js',
+          entryFileNames: '[name].cjs',
+          chunkFileNames: 'chunks/[name].cjs',
           hoistTransitiveImports: false,
         },
         {
           format: 'es',
-          entryFileNames: '[name].mjs',
-          chunkFileNames: 'chunks/[name].mjs',
+          entryFileNames: '[name].js',
+          chunkFileNames: 'chunks/[name].js',
           hoistTransitiveImports: false,
         },
       ],

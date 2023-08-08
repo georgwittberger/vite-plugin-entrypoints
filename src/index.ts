@@ -1,4 +1,4 @@
-import glob from 'glob';
+import { glob } from 'glob';
 import { isAbsolute, resolve as resolvePath } from 'node:path';
 import type { PluginOption } from 'vite';
 
@@ -50,7 +50,7 @@ const entrypoints = (pluginOptions: EntrypointsOptions): PluginOption => ({
     const basePath = resolveBasePath(pluginOptions.baseDir);
     const entryFiles = await findEntryFiles(
       pluginOptions.entryFilePatterns,
-      basePath
+      basePath,
     );
     if (entryFiles.length < 1) return;
     const entrypoints = createEntrypoints(entryFiles, basePath, pluginOptions);
@@ -71,26 +71,18 @@ const resolveBasePath = (baseDir?: string) =>
 
 const findEntryFiles = async (patterns: string[], basePath: string) => {
   const patternMatches = await Promise.all(
-    patterns.map((pattern) => findFilesByPattern(pattern, basePath))
+    patterns.map((pattern) => findFilesByPattern(pattern, basePath)),
   );
-  return patternMatches.flatMap((files) => files);
+  return patternMatches.flat();
 };
 
-const findFilesByPattern = (pattern: string, basePath?: string) =>
-  new Promise<string[]>((resolve, reject) => {
-    glob(pattern, { cwd: basePath }, (err, matches) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(matches);
-    });
-  });
+const findFilesByPattern = (pattern: string, basePath: string) =>
+  glob(pattern, { cwd: basePath });
 
 const createEntrypoints = (
   entryFiles: string[],
   basePath: string,
-  pluginOptions: EntrypointsOptions
+  pluginOptions: EntrypointsOptions,
 ) =>
   entryFiles.reduce<Record<string, string>>((entrypoints, entryFile) => {
     const entryName = pluginOptions.entryNameMapper
