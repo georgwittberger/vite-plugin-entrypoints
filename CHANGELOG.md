@@ -1,5 +1,15 @@
 # vite-plugin-entrypoints
 
+## 2.0.0
+
+### Major Changes
+
+- 8d9a7a8: Update to Vite 5
+
+  This major version updates the development dependency Vite to version 5. From now on the plugin is only tested with Vite 5 or higher.
+
+  Please make sure to update your project to use an appropriate version of Vite.
+
 ## 1.0.2
 
 ### Patch Changes
