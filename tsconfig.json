@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node18/tsconfig",
+  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
     "strict": true,
     "allowUnusedLabels": false,
