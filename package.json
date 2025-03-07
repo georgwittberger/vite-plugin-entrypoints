@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-entrypoints",
   "description": "Vite plugin to generate additional entry points for files matching glob patterns",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "keywords": [
     "vite",
     "plugin",
