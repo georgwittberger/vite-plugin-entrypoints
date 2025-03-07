@@ -1,10 +1,10 @@
 # vite-plugin-entrypoints
 
-![GitHub Release Workflow Status](https://img.shields.io/github/actions/workflow/status/georgwittberger/vite-plugin-entrypoints/release.yml?branch=main)
-![npm Version](https://img.shields.io/npm/v/vite-plugin-entrypoints)
-![npm Downloads](https://img.shields.io/npm/dw/vite-plugin-entrypoints)
-![License](https://img.shields.io/github/license/georgwittberger/vite-plugin-entrypoints)
-![GitHub Repo Stars](https://img.shields.io/github/stars/georgwittberger/vite-plugin-entrypoints?style=social)
+[![GitHub Release Workflow Status](https://img.shields.io/github/actions/workflow/status/georgwittberger/vite-plugin-entrypoints/release.yml?branch=main)](https://github.com/georgwittberger/vite-plugin-entrypoints/actions/workflows/release.yml)
+[![npm Version](https://img.shields.io/npm/v/vite-plugin-entrypoints)](https://www.npmjs.com/package/vite-plugin-entrypoints)
+[![npm Downloads](https://img.shields.io/npm/dw/vite-plugin-entrypoints)](https://www.npmjs.com/package/vite-plugin-entrypoints)
+[![License](https://img.shields.io/github/license/georgwittberger/vite-plugin-entrypoints)](https://github.com/georgwittberger/vite-plugin-entrypoints?tab=MIT-1-ov-file#readme)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/georgwittberger/vite-plugin-entrypoints?style=social)](https://github.com/georgwittberger/vite-plugin-entrypoints)
 
 Vite plugin to generate additional entry points for files matching glob patterns.
 
@@ -61,13 +61,13 @@ This plugin solves our problem by generating entry points for all files matching
 ## Installation
 
 ```bash
-# NPM
+# npm
 npm install vite-plugin-entrypoints --save-dev
 
 # Yarn
 yarn add vite-plugin-entrypoints --dev
 
-# PNPM
+# pnpm
 pnpm add vite-plugin-entrypoints --save-dev
 ```
 
