@@ -1,5 +1,11 @@
 # vite-plugin-entrypoints
 
+## 2.0.2
+
+### Patch Changes
+
+- 54f0614: update dependencies
+
 ## 2.0.1
 
 ### Patch Changes
